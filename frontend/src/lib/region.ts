@@ -42,7 +42,7 @@ export class Region {
   }
 
   static empty(): Region {
-    return new Region(new Array(1024).fill(null));
+    return new Region(Array.from({ length: 1024 }, () => null));
   }
 
   static parse(bytes: Uint8Array): Region {

@@ -1,5 +1,5 @@
-import { type BlockKind, blockLook } from './blockColors.ts';
 import type { BlockState } from './chunk.ts';
+import { type BlockKind, blockLook } from './blockColors.ts';
 
 export const KIND_AIR = 0;
 export const KIND_SOLID = 1;

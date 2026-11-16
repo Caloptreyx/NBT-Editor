@@ -1,9 +1,9 @@
 import type { ChunkModel } from '../../lib/chunk.ts';
-import { findBlockEntity } from '../../lib/chunk.ts';
 import type { CompoundTag } from '../../lib/nbt.ts';
-import { getString } from '../../lib/nbt.ts';
 import type { Volume } from '../../lib/volume.ts';
 import type { BlockPos } from '../VoxelViewport.tsx';
+import { findBlockEntity } from '../../lib/chunk.ts';
+import { getString } from '../../lib/nbt.ts';
 
 export function samePos(a: BlockPos | null, b: BlockPos | null): boolean {
   return a === b || (a !== null && b !== null && a.x === b.x && a.y === b.y && a.z === b.z);

@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
-import { panCamera, walkCamera } from '../lib/camera.ts';
 import type { Volume } from '../lib/volume.ts';
+import { panCamera, walkCamera } from '../lib/camera.ts';
 import { useExtTranslations } from '../translations.ts';
 import { samePos, VoxelRenderer } from './voxelRenderer.ts';
 

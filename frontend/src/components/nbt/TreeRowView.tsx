@@ -21,7 +21,6 @@ import TextInput from '@/elements/input/TextInput.tsx';
 import Tooltip from '@/elements/overlays/Tooltip.tsx';
 import type { Tag } from '../../lib/nbt.ts';
 import { useExtTranslations } from '../../translations.ts';
-import TypeBadge from './TypeBadge.tsx';
 import {
   type KeyError,
   type MoreRow,
@@ -31,6 +30,7 @@ import {
   scalarText,
   type TreeRow,
 } from './treeModel.ts';
+import TypeBadge from './TypeBadge.tsx';
 
 export type EditField = 'value' | 'key';
 export type EditError = KeyError | 'invalidValue';

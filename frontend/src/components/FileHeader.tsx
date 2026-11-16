@@ -1,6 +1,6 @@
+import type { ReactNode } from 'react';
 import { faCircle, faCircleCheck, faLock } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import type { ReactNode } from 'react';
 import type { FileKind } from '../lib/worlds.ts';
 import { useExtTranslations } from '../translations.ts';
 import FileKindIcon, { fileKindColor } from './FileKindIcon.tsx';

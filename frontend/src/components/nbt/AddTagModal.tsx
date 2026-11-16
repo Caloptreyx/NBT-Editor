@@ -7,8 +7,8 @@ import { Modal, ModalFooter } from '@/elements/modals/Modal.tsx';
 import Text from '@/elements/typography/Text.tsx';
 import { useTranslations } from '@/providers/TranslationProvider.tsx';
 import { useExtTranslations } from '../../translations.ts';
-import { TYPE_BADGES } from './TypeBadge.tsx';
 import { type ContainerTag, type CreatableTagType, TAG_TYPES, validateKey } from './treeModel.ts';
+import { TYPE_BADGES } from './TypeBadge.tsx';
 
 // Opened for compounds and empty lists; non-empty lists add their item type directly.
 export default function AddTagModal({

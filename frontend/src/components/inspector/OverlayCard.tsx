@@ -1,5 +1,5 @@
-import classNames from 'classnames';
 import type { ComponentProps } from 'react';
+import classNames from 'classnames';
 
 // a compact translucent card floating over the 3D view; overlay containers disable pointer events so the
 // viewport keeps receiving drags between the cards

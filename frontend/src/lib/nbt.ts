@@ -270,8 +270,7 @@ class Reader {
         if (itemId === 0 && length > 0) throw new NbtError(`List of end tags with ${length} items`);
         // Every item payload takes at least one byte; rejects absurd lengths before allocating.
         this.need(length);
-        const items: Tag[] = new Array(length);
-        for (let i = 0; i < length; i++) items[i] = this.payload(itemId, depth + 1);
+        const items: Tag[] = Array.from({ length }, () => this.payload(itemId, depth + 1));
         return { type: 'list', itemType, items };
       }
       case 10: {
@@ -610,8 +609,7 @@ function snbtNumber(value: number, suffix: string): string {
 
 function snbtArray<T>(prefix: string, values: ArrayLike<T>, format: (v: T) => string, maxItems: number): string {
   const shown = Math.min(values.length, maxItems);
-  const parts: string[] = new Array(shown);
-  for (let i = 0; i < shown; i++) parts[i] = format(values[i]);
+  const parts = Array.from({ length: shown }, (_, i) => format(values[i]));
   if (values.length > shown) parts.push(`... ${values.length - shown} more`);
   return `[${prefix};${parts.join(',')}]`;
 }

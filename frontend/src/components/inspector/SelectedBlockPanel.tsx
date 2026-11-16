@@ -5,11 +5,11 @@ import ActionIcon from '@/elements/buttons/ActionIcon.tsx';
 import Button from '@/elements/buttons/Button.tsx';
 import TextInput from '@/elements/input/TextInput.tsx';
 import type { BlockState } from '../../lib/chunk.ts';
-import { blockStateKey, parseBlockStateKey } from '../../lib/chunk.ts';
 import type { CompoundTag } from '../../lib/nbt.ts';
+import type { BlockPos } from '../VoxelViewport.tsx';
+import { blockStateKey, parseBlockStateKey } from '../../lib/chunk.ts';
 import { useExtTranslations } from '../../translations.ts';
 import NbtTreeEditor from '../NbtTreeEditor.tsx';
-import type { BlockPos } from '../VoxelViewport.tsx';
 import { blockEntityId } from './blocks.ts';
 import OverlayCard from './OverlayCard.tsx';
 

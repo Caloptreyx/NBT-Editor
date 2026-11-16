@@ -1,5 +1,5 @@
-import { KIND_AIR } from './mesh.ts';
 import type { Volume } from './volume.ts';
+import { KIND_AIR } from './mesh.ts';
 
 export interface GridHit {
   x: number;

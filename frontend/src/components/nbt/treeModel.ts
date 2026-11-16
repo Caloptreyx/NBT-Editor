@@ -67,15 +67,13 @@ export function scalarText(tag: ScalarTag): string {
 
 export function arrayPreview(tag: ArrayTag): string {
   const shown = Math.min(tag.value.length, ARRAY_PREVIEW_ITEMS);
-  const parts: string[] = new Array(shown);
-  for (let i = 0; i < shown; i++) parts[i] = String(tag.value[i]);
+  const parts = Array.from({ length: shown }, (_, i) => String(tag.value[i]));
   return tag.value.length > shown ? `${parts.join(', ')}, …` : parts.join(', ');
 }
 
 export function arrayText(tag: ArrayTag, limit = Number.POSITIVE_INFINITY): string {
   const shown = Math.min(tag.value.length, limit);
-  const parts: string[] = new Array(shown);
-  for (let i = 0; i < shown; i++) parts[i] = String(tag.value[i]);
+  const parts = Array.from({ length: shown }, (_, i) => String(tag.value[i]));
   return parts.join(', ');
 }
 

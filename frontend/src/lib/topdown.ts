@@ -1,5 +1,5 @@
-import { type BlockLook, blockLook } from './blockColors.ts';
 import type { ChunkModel } from './chunk.ts';
+import { type BlockLook, blockLook } from './blockColors.ts';
 
 const COLUMNS = 256;
 const SEARCHING = 0;
@@ -21,9 +21,9 @@ export function renderChunkTopDown(model: ChunkModel, maxY?: number): Uint8Clamp
   const top = Math.min(maxY ?? model.maxY, model.maxY);
   const state = new Uint8Array(COLUMNS);
   const surfaceY = new Int32Array(COLUMNS);
-  const surface: (BlockLook | null)[] = new Array(COLUMNS).fill(null);
+  const surface: (BlockLook | null)[] = Array.from({ length: COLUMNS }, () => null);
   const floorY = new Int32Array(COLUMNS);
-  const floor: (BlockLook | null)[] = new Array(COLUMNS).fill(null);
+  const floor: (BlockLook | null)[] = Array.from({ length: COLUMNS }, () => null);
   let pending = COLUMNS;
 
   const sections = [...model.sections.values()].sort((a, b) => b.y - a.y);

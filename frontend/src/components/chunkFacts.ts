@@ -1,8 +1,8 @@
 import { bytesToString } from '@/lib/format/size.ts';
 import { formatDateTime } from '@/lib/format/time.ts';
-import { COMPRESSION_NAMES, formatTicks, slotCoords } from '../lib/session.ts';
 import type { ChunkPreview, RegionFile } from '../pages/useRegionSession.ts';
 import type { getExtTranslations } from '../translations.ts';
+import { COMPRESSION_NAMES, formatTicks, slotCoords } from '../lib/session.ts';
 
 export interface ChunkFact {
   label: string;

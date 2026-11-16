@@ -1,6 +1,6 @@
 import { type RefObject, useEffect, useRef } from 'react';
-import { useExtTranslations } from '../../translations.ts';
 import type { BlockPos } from '../VoxelViewport.tsx';
+import { useExtTranslations } from '../../translations.ts';
 
 const CURSOR_OFFSET = 14;
 

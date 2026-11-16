@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import Progress from '@/elements/feedback/Progress.tsx';
-import { rectSelection, SLOT_COUNT, slotCoords } from '../lib/session.ts';
 import type { ChunkPreview, RegionFile } from '../pages/useRegionSession.ts';
+import { rectSelection, SLOT_COUNT, slotCoords } from '../lib/session.ts';
 import { useExtTranslations } from '../translations.ts';
 import { chunkFacts, chunkPosition } from './chunkFacts.ts';
 

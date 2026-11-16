@@ -47,8 +47,9 @@ Package name: `dev.caloptreyx.nbteditor` · Requires panel `>=1.2.3`
 ## Development
 
 Frontend checks from the panel's `frontend` directory:
-`./node_modules/.bin/tsc -p tsconfig.json --noEmit` and
-`./node_modules/.bin/biome check extensions/dev_caloptreyx_nbteditor`. Library tests from this repository:
+`./node_modules/.bin/tsc -p tsconfig.json --noEmit`,
+`./node_modules/.bin/oxlint extensions/dev_caloptreyx_nbteditor` and
+`./node_modules/.bin/oxfmt --check extensions/dev_caloptreyx_nbteditor`. Library tests from this repository:
 `node --test tests/*.test.ts`. The backend is built and tested by CI (`.github/workflows/check.yml`).
 `python3 scripts/package.py` builds `dist/dev_caloptreyx_nbteditor.c7s.zip`.
 

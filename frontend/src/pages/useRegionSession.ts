@@ -1,9 +1,9 @@
 import { basename } from 'pathe';
 import { useEffect, useRef, useState } from 'react';
 import { getHttpStatus } from '@/api/axios.ts';
+import type { NbtDocument } from '../lib/nbt.ts';
 import { readFile, writeFile } from '../api.ts';
 import { applyChunk, type ChunkModel, type ChunkSummary, decodeChunk } from '../lib/chunk.ts';
-import type { NbtDocument } from '../lib/nbt.ts';
 import { parseRegionFileName, Region } from '../lib/region.ts';
 import { deleteFromSiblings, type SiblingOutcome, SLOT_COUNT, slotCoords } from '../lib/session.ts';
 import { renderChunkTopDown } from '../lib/topdown.ts';
@@ -188,7 +188,7 @@ export default function useRegionSession(serverUuid: string): RegionSession {
       const regionKind: RegionKind = kind === 'entities' || kind === 'poi' ? kind : 'region';
 
       reset();
-      const slots: (ChunkPreview | null)[] = new Array(SLOT_COUNT).fill(null);
+      const slots: (ChunkPreview | null)[] = Array.from({ length: SLOT_COUNT }, () => null);
       for (let index = 0; index < SLOT_COUNT; index++) {
         const { lx, lz } = slotCoords(index);
         // entity and poi chunks have no blocks to render; their cells only show presence

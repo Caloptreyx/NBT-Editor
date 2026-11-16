@@ -2,8 +2,8 @@ import { faCube, faEraser, faPenToSquare, faTrash } from '@fortawesome/free-soli
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Button from '@/elements/buttons/Button.tsx';
 import Tooltip from '@/elements/overlays/Tooltip.tsx';
-import { slotCoords } from '../lib/session.ts';
 import type { ChunkPreview, RegionFile } from '../pages/useRegionSession.ts';
+import { slotCoords } from '../lib/session.ts';
 import { useExtTranslations } from '../translations.ts';
 import { chunkFacts, chunkPosition } from './chunkFacts.ts';
 

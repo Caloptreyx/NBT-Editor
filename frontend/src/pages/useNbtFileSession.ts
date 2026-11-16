@@ -1,8 +1,8 @@
 import { basename } from 'pathe';
 import { useState } from 'react';
 import { getHttpStatus } from '@/api/axios.ts';
-import { readFile, writeFile } from '../api.ts';
 import type { NbtDocument } from '../lib/nbt.ts';
+import { readFile, writeFile } from '../api.ts';
 import { type NbtFileFormat, readNbtFile, writeNbtFile } from '../lib/nbtFile.ts';
 
 export interface NbtFile {

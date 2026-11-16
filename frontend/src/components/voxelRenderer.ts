@@ -1,3 +1,4 @@
+import type { BlockPos } from './VoxelViewport.tsx';
 import {
   cameraEye,
   cameraRay,
@@ -10,7 +11,6 @@ import {
 import { buildLookTable, contentBounds, type LookTable, meshSection, VERTEX_STRIDE } from '../lib/mesh.ts';
 import { type BlockHit, pickBlock } from '../lib/raycast.ts';
 import { type Volume, volumeSectionCounts, volumeSectionVersions } from '../lib/volume.ts';
-import type { BlockPos } from './VoxelViewport.tsx';
 
 const BACKGROUND = [0x11 / 255, 0x13 / 255, 0x1a / 255] as const;
 const MESH_BUDGET_MS = 10;
@@ -650,7 +650,6 @@ export class VoxelRenderer {
     gl.cullFace(gl.BACK);
     gl.disable(gl.BLEND);
     gl.depthMask(true);
-    // biome-ignore lint/correctness/useHookAtTopLevel: WebGL call, not a React hook
     gl.useProgram(res.meshProgram);
     gl.uniformMatrix4fv(res.meshViewProj, false, this.viewProj);
     gl.bindVertexArray(res.meshVao);
@@ -682,7 +681,6 @@ export class VoxelRenderer {
     gl.blendFuncSeparate(gl.SRC_ALPHA, gl.ONE_MINUS_SRC_ALPHA, gl.ONE, gl.ONE_MINUS_SRC_ALPHA);
     gl.depthMask(false);
     gl.disable(gl.CULL_FACE);
-    // biome-ignore lint/correctness/useHookAtTopLevel: WebGL call, not a React hook
     gl.useProgram(res.lineProgram);
     gl.uniformMatrix4fv(res.lineViewProj, false, this.viewProj);
     gl.bindVertexArray(res.lineVao);

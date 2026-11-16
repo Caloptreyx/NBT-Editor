@@ -22,7 +22,6 @@ import { type CompoundTag, type Tag, tagToSnbt } from '../lib/nbt.ts';
 import { useExtTranslations } from '../translations.ts';
 import AddTagModal from './nbt/AddTagModal.tsx';
 import ArrayEditModal from './nbt/ArrayEditModal.tsx';
-import TreeRowView, { type EditField, ROW_HEIGHT, type TreeActions } from './nbt/TreeRowView.tsx';
 import {
   type ArrayTag,
   addChild,
@@ -45,6 +44,7 @@ import {
   type ScalarTag,
   validateKey,
 } from './nbt/treeModel.ts';
+import TreeRowView, { type EditField, ROW_HEIGHT, type TreeActions } from './nbt/TreeRowView.tsx';
 
 export interface NbtTreeEditorProps {
   root: CompoundTag;

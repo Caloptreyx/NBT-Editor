@@ -1,6 +1,6 @@
 import type { TagType } from '../../lib/nbt.ts';
-import { useExtTranslations } from '../../translations.ts';
 import type { CreatableTagType } from './treeModel.ts';
+import { useExtTranslations } from '../../translations.ts';
 
 export const TYPE_BADGES: Record<CreatableTagType, { label: string; color: string }> = {
   byte: { label: 'B', color: 'grape' },

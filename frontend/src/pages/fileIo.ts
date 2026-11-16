@@ -1,7 +1,7 @@
 import { basename, dirname } from 'pathe';
 import { getHttpStatus } from '@/api/axios.ts';
-import { listDirectory, readFile, writeFile } from '../api.ts';
 import type { FileIo } from '../lib/session.ts';
+import { listDirectory, readFile, writeFile } from '../api.ts';
 
 /** FileIo over the extension API; `exists` answers from directory listings cached for the lifetime of the instance. */
 export function createFileIo(serverUuid: string): FileIo {
