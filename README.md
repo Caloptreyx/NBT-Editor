@@ -4,7 +4,7 @@ A [Calagopus Panel](https://calagopus.com) extension that lets you look inside a
 **NBT Editor** page: browse region files as a chunk map, inspect chunks in 3D, edit blocks and NBT data, and prune
 chunks you no longer need.
 
-Package name: `dev.caloptreyx.nbteditor` · Requires panel `>=1.2.3`
+Package name: `dev.caloptreyx.nbteditor` · Requires panel `>=1.2.10`
 
 ## Features
 
