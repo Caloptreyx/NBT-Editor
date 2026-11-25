@@ -28,6 +28,20 @@ Package name: `dev.caloptreyx.nbteditor` · Requires panel `>=1.2.10`
   file revisions, show up in the activity log and respect subuser ignored files. A save is refused when the file changed
   since it was opened, unless you choose to overwrite.
 
+## Screenshots
+
+**World & file browser**: quick-access cards for detected worlds (`level.dat`, Overworld, The Nether, The End) and the server directory tree.
+
+![NBT Editor file browser](docs/screenshots/file-browser.png)
+
+**NBT tree editor**: inspect, search, edit, add, and delete typed NBT tags in `.dat`, `.nbt`, and `.schem` files.
+
+![NBT tree editor on level.dat](docs/screenshots/nbt-tree.png)
+
+**Dimension region browser**: navigate directly into Overworld, Nether, and End `.mca` region files.
+
+![Overworld region files browser](docs/screenshots/world-regions.png)
+
 ## Notes
 
 - Region saves and pruning are only available while the server is offline: a running server keeps region files cached
